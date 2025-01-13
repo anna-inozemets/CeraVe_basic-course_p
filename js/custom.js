@@ -149,11 +149,11 @@ const slideActions = {
   },
   10: () => {
     $('.arrow--prev').addClass('arrow--white');
-    gsap.from('.slide--10__icons img.first', { opacity: 0, duration: 0.75, delay: 1, x: -30 });
-    gsap.from('.slide--10__icons img.second', { opacity: 0, duration: 0.75, delay: 1, x: 30 });
-    gsap.from('.slide--10__left h3', { opacity: 0, duration: 0.75, delay: 1.5, y: 50 });
-    gsap.from('.slide--10__left p', { opacity: 0, duration: 0.75, delay: 2, y: 50 });
-    nextArrowDelay = 3;
+    gsap.from('.slide--10__left h3', { opacity: 0, duration: 0.75, delay: 1, y: 50 });
+    gsap.from('.slide--10__left p', { opacity: 0, duration: 0.75, delay: 1.15, y: 50 });
+    gsap.from('.slide--10__block.first', { opacity: 0, duration: 1, delay: 1.9, scale: 0 });
+    gsap.from('.slide--10__block.second', { opacity: 0, duration: 1, delay: 2.4, scale: 0 });
+    nextArrowDelay = 3.4;
   },
   11: () => {
     $('.arrow--prev').removeClass('arrow--white');
