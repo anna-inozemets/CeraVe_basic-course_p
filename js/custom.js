@@ -170,13 +170,13 @@ const slideActions = {
   },
   12: () => {
     clearTimeout(lastSlideActionTimeout);
-    $('.arrow--prev').removeClass('arrow--white');
+    $('.arrow--prev').addClass('arrow--white');
     gsap.from('.slide--12__text', { opacity: 0, duration: 0.75, delay: 1, x: "-95%" });
     gsap.from('.slide--12__content img.skin', { opacity: 0, duration: 0.75, delay: 1.25, x: "-95%" });
     nextArrowDelay = 2.25;
   },
   13: () => {
-    $('.arrow--prev').addClass('arrow--white');
+    $('.arrow--prev').removeClass('arrow--white');
     gsap.from('.slide--instruction__block.first', { opacity: 0, duration: 0.75, delay: 1, x: 45 });
     gsap.from('.slide--instruction__block.first img.arrow', { opacity: 0, duration: 0.75, delay: 1.2, x: 45, y: 45 });
     gsap.from('.slide--instruction__block.second', { opacity: 0, duration: 0.75, delay: 1.6, x: 45 });
