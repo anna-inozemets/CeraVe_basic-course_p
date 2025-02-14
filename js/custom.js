@@ -15,7 +15,7 @@ const hiddenArrowClass = 'hidden';
 let nextArrowDelay = 1.5;
 
 // additional varibles for slides
-const totalSlideAmount = 13;
+const totalSlideAmount = 12;
 const pathNames = Array.from(
   { length: totalSlideAmount }, (_, i) => ({ count: i + 1, pathName:`./slides/slide--${i + 1}.html` })
 );
@@ -156,6 +156,7 @@ const slideActions = {
     nextArrowDelay = 3.4;
   },
   11: () => {
+    clearTimeout(lastSlideActionTimeout);
     $('.arrow--prev').removeClass('arrow--white');
     gsap.from('.slide--11__content img.doctor', { opacity: 0, duration: 0.75, delay: 1, x: -30 });
     gsap.from('.slide--11__bottle.first', { opacity: 0, duration: 0.75, delay: 1.5, x: 30 });
@@ -169,23 +170,12 @@ const slideActions = {
     nextArrowDelay = 3.9;
   },
   12: () => {
-    clearTimeout(lastSlideActionTimeout);
     $('.arrow--prev').addClass('arrow--white');
     gsap.from('.slide--12__text', { opacity: 0, duration: 0.75, delay: 1, x: "-95%" });
     gsap.from('.slide--12__content img.skin', { opacity: 0, duration: 0.75, delay: 1.25, x: "-95%" });
-    nextArrowDelay = 2.25;
-  },
-  13: () => {
-    $('.arrow--prev').removeClass('arrow--white');
-    gsap.from('.slide--instruction__block.first', { opacity: 0, duration: 0.75, delay: 1, x: 45 });
-    gsap.from('.slide--instruction__block.first img.arrow', { opacity: 0, duration: 0.75, delay: 1.2, x: 45, y: 45 });
-    gsap.from('.slide--instruction__block.second', { opacity: 0, duration: 0.75, delay: 1.6, x: 45 });
-    gsap.from('.slide--instruction__block.second img.arrow', { opacity: 0, duration: 0.75, delay: 1.8, x: 45, y: 45 });
-    gsap.from('.slide--instruction__block.third', { opacity: 0, duration: 0.75, delay: 2.2, x: 45 });
-    gsap.from('.slide--instruction__block.third img.arrow', { opacity: 0, duration: 0.75, delay: 2.4, x: 45, y: 45 });
     lastSlideActionTimeout = setTimeout(() => {
       lastSlideAction();
-    }, 10 * 1000);
+    }, 7.5 * 1000);
   },
 }
 // function that add animation for element
