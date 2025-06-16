@@ -77,7 +77,7 @@ button {
 }
 img {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   max-width: 100%;
   max-height: 100%;
 }
@@ -169,7 +169,8 @@ p.slide-numbering.right {
 }
 .slide--1__left img {
   height: 100%;
-  min-width: max-content;
+  width: 117em;
+  max-width: unset;
   margin: 0 auto;
 }
 .slide--1__right {
@@ -192,15 +193,15 @@ p.slide-numbering.right {
   position: relative;
   left: -14em;
   height: 26em;
-  min-width: max-content;
+  width: 85em;
   margin: 0 auto 30em;
+  object-fit: contain;
 }
 .slide--1__img img {
   position: relative;
   left: 6em;
   height: 16em;
-  min-width: max-content;
-  width: max-content;
+  width: 92em;
   margin: 0 auto 5em;
 }
 /*#endregion sl1*/
